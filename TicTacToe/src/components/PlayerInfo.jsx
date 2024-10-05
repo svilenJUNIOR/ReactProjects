@@ -1,11 +1,15 @@
+import { useState } from "react";
+
 export function RenderPlayerInfo({name, symbol}) {
+    const [isEditing, setIsEditing] = useState(false)
+
   return (
     <li>
       <span>
-        <span className="player-name">{name}</span>
+        {!isEditing ? <span className="player-name">{name}</span> : <input></input> }
         <span className="player-symbol">{symbol}</span>
       </span>
-      <button>EDIT</button>
+      <button onClick={() => setIsEditing(true)}>EDIT</button>
     </li>
   );
 }
