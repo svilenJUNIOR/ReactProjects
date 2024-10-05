@@ -6,10 +6,10 @@ export function RenderPlayerInfo({name, symbol}) {
   return (
     <li>
       <span>
-        {!isEditing ? <span className="player-name">{name}</span> : <input></input> }
+        {!isEditing ? <span className="player-name">{name}</span> : <input type="text" required value={name}/>}
         <span className="player-symbol">{symbol}</span>
       </span>
-      <button onClick={() => setIsEditing(true)}>EDIT</button>
+      <button onClick={() => setIsEditing(!isEditing)}>{isEditing ? "Save" : "Edit"}</button>
     </li>
   );
 }
