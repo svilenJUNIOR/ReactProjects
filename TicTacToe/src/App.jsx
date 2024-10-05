@@ -5,10 +5,10 @@ function App() {
     <main>
       <div id="game-container">
         <ol id="players">
-          
-          {RenderPlayerInfo("Player 1", "X")}
-          {RenderPlayerInfo("Player 2", "O")}
 
+          <RenderPlayerInfo name="Player 1"  symbol="X" />
+          <RenderPlayerInfo name="Player 2"  symbol="O" />
+          
         </ol>
       </div>
     </main>

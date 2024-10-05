@@ -1,4 +1,4 @@
-export function RenderPlayerInfo(name, symbol) {
+export function RenderPlayerInfo({name, symbol}) {
   return (
     <li>
       <span>
