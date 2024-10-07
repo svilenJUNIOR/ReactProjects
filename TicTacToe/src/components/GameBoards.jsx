@@ -27,7 +27,7 @@ export function GameBoard({handePlayerChange, selectedSymbol}){
                 <ol>
                     {row.map((symbol, colIndex) => 
                     <li key={colIndex}>
-                        <button onClick={() => handleSquareClick(rowIndex, colIndex)}>{symbol}</button>
+                        <button onClick={() => handleSquareClick(rowIndex, colIndex)} disabled={symbol != null}>{symbol}</button>
                     </li>)}
                 </ol>
             </li>)}
