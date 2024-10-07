@@ -1,12 +1,12 @@
 import { useState } from "react";
 
-export function RenderPlayerInfo({ name, symbol }) {
+export function RenderPlayerInfo({ name, symbol, isActive }) {
   const [isEditing, setIsEditing] = useState(false);
   const [playerName, setPlayerName] = useState(name);
 
   return (
-    <li>
-      <span>
+    <li className={isActive ? "active" : undefined}>
+      <span className="player">
         {
         !isEditing 
         ?<span className="player-name">{playerName}</span>
